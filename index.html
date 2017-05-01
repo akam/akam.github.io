@@ -9,6 +9,20 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<style>
+		article{
+			animation: fade 4s 1;
+		}
+		@keyframes fade{
+			0%{
+				opacity: 0
+			}
+			20%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
 		body{
 			background-color: rgb(50,50,50);
 		}
@@ -134,13 +148,12 @@
 	</article>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script type="text/javascript">
-    $(document).ready(function(){
-	    $("article").hide();
-	    $("article").fadeIn(2000); // fade in over 2000 milliseconds 
-	    $(".close").on("click", function(){
-	    	$(".alert").remove();
-	    })
-	});
+    window.onload = function() {
+    	var close = document.querySelector(".alert");
+    	close.addEventListener("click", function(){
+    		close.parentNode.removeChild(close);
+    	})
+    }
     </script>
 
 </body>
