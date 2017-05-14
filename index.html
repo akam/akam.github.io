@@ -97,8 +97,35 @@
 			animation: fadeIn 1s 1;
 			animation-fill-mode: forwards;
 		}
-		.text{
+		.gametexthide{
+			visibility: hidden;
 		}
+		.projecttexthide{
+			visibility: hidden;
+		}
+		.fadeText{
+			animation: fade 2s 1;
+		}
+		.fadeOut{
+			animation: fadeO 2s 1;
+			animation-fill-mode: forwards;
+		}
+		@keyframes fadeO{
+			0%{
+				opacity: 1;
+			}
+			20%{
+				opacity: 1;
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+		.smallbox{
+			width: 200px;
+			margin-bottom: -100px;
+		}
+
 	</style>
 </head>
 <body>
@@ -136,14 +163,19 @@
 			<hr>
 		</section>
 		<div class="projects container">
+			<div><p class="smallbox" style="text-align: center">My First Game!</p></div>
+			<div><p class="smallbox" style="text-align: center">Filler Project Page</p></div>
+			<div><p class="smallbox" style="text-align: center">In progress</p></div>
+			</div>
+		<div class="projects container">
 			<a href="https://aykaypkt.github.io/shape_game/"><div class="circles game"></div></a>
 			<a href="https://aykaypkt.github.io/project_site/"><div class="circles project"></div></a>
 			<div class="circles"></div>	
 		</div>
 		<div class="projects container">
-			<div class="box text gametext"><p>Game Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, semper id posuere at, gravida vel sapien. Donec mollis arcu id diam dignissim, id euismod ante blandit. Curabitur tempus est nec tristique lobortis. In sagittis, neque quis maximus efficitur, dui magna tempus velit, ac hendrerit ante eros vel lorem. Morbi orci magna, placerat ac sem id, vestibulum ultrices orci. Cras vitae posuere ex.</p></div>
-			<div class="box text projecttext"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, semper id posuere at, gravida vel sapien. Donec mollis arcu id diam dignissim, id euismod ante blandit. Curabitur tempus est nec tristique lobortis. In sagittis, neque quis maximus efficitur, dui magna tempus velit, ac hendrerit ante eros vel lorem. Morbi orci magna, placerat ac sem id, vestibulum ultrices orci. Cras vitae posuere ex.</p></div>
-			<div class="box text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, semper id posuere at, gravida vel sapien. Donec mollis arcu id diam dignissim, id euismod ante blandit. Curabitur tempus est nec tristique lobortis. In sagittis, neque quis maximus efficitur, dui magna tempus velit, ac hendrerit ante eros vel lorem. Morbi orci magna, placerat ac sem id, vestibulum ultrices orci. Cras vitae posuere ex.</p></div>	
+			<div class="box text gametext"><p class='gametexthide' style="text-align: center">This is my first game made using Canvas. It is a simple shape identifier game.</p></div>
+			<div class="box text projecttext" style="text-align: center"><p class='projecttexthide'>Who likes cheesecake?</p></div>
+			<div class="box text" style="text-align: center"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, semper id posuere at, gravida vel sapien. Donec mollis arcu id diam dignissim, id euismod ante blandit. Curabitur tempus est nec tristique lobortis. In sagittis, neque quis maximus efficitur, dui magna tempus velit, ac hendrerit ante eros vel lorem. Morbi orci magna, placerat ac sem id, vestibulum ultrices orci. Cras vitae posuere ex.</p></div>	
 		</div>
 	</article>g
     <script type="text/javascript">
@@ -152,6 +184,28 @@
     	close.addEventListener("click", function(){
     		close.parentNode.removeChild(close);
     	})
+    	var game = document.querySelector(".game");
+    	var gametexthide = document.querySelector(".gametexthide");
+    	game.addEventListener("mouseover", function(){
+    		gametexthide.style.visibility = "visible";
+    		gametexthide.classList.remove("fadeOut");
+    		gametexthide.classList.add("fadeText");
+    	});
+    	game.addEventListener("mouseout", function(){
+    		gametexthide.classList.remove("fadeText");
+    		gametexthide.classList.add("fadeOut");
+    	});
+    	var project = document.querySelector(".project");
+    	var projecttext = document.querySelector(".projecttexthide");
+    	project.addEventListener("mouseover", function(){
+    		projecttext.style.visibility = "visible";
+    		projecttext.classList.remove("fadeOut");
+    		projecttext.classList.add("fadeText");
+    	});
+    	project.addEventListener("mouseout", function(){
+    		projecttext.classList.remove("fadeText");
+    		projecttext.classList.add("fadeOut");
+    	});
     }
     </script>
 </body>
