@@ -1,223 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>aykayPKT profile</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>aykayPKT Homepage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<style>
-		article{
-			animation: fade 4s 1;
-		}
-		@keyframes fade{
-			0%{
-				opacity: 0
-			}
-			20%{
-				opacity: 0;
-			}
-			100%{
-				opacity: 1;
-			}
-		}
-		body{
-			background-color: rgb(50,50,50);
-		}
-		.navbar{
-			height: 20px;
-		}
-		.navbar-header{
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-		.box{
-			width: 200px;
-			height: 200px;
-		}
-		.image{
-			background-image: url(https://github.com/aykaypkt/public_images/blob/master/main/phoenix.jpeg?raw=true);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
-		p{
-			color: white;
-		}
-		.about{
-			display: flex;
-
-		}
-		.aboutMe{
-			margin-left: 2%;
-			flex-grow: 1;
-		}
-		h1{
-			color:white;
-		}
-		.header{
-			margin: 5% 10%;
-		}
-		.projects{
-			margin-bottom: 3%;
-			display: flex;
-			justify-content: space-around;
-		}
-		.circles{
-			width: 200px;
-			height: 200px;
-			border: 1px solid white;
-			border-radius: 50%;
-		}
-		.game{
-			background-image: url(https://github.com/aykaypkt/public_images/blob/master/main/shapes.png?raw=true);
-			background-size: cover;
-			filter: blur(2px);
-		}
-		.game:hover{
-			animation: fadeIn 1s 1;
-			animation-fill-mode: forwards;
-			box-shadow: 0 0 10px 3px lightblue;
-		}
-		@keyframes fadeIn{
-			100%{
-				filter: blur(0);
-			}
-
-		}
-		.project{
-			background-image: url(https://github.com/aykaypkt/public_images/blob/master/main/proj.png?raw=true);
-			background-size: cover;
-			filter: blur(2px);
-		}
-		.project:hover{
-			box-shadow: 0 0 10px 3px lightblue;
-			animation: fadeIn 1s 1;
-			animation-fill-mode: forwards;
-		}
-		.gametexthide{
-			visibility: hidden;
-		}
-		.projecttexthide{
-			visibility: hidden;
-		}
-		.fadeText{
-			animation: fade 2s 1;
-		}
-		.fadeOut{
-			animation: fadeO 2s 1;
-			animation-fill-mode: forwards;
-		}
-		@keyframes fadeO{
-			0%{
-				opacity: 1;
-			}
-			20%{
-				opacity: 1;
-			}
-			100%{
-				opacity: 0;
-			}
-		}
-		.smallbox{
-			width: 200px;
-			margin-bottom: -100px;
-		}
-
-	</style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="alert alert-warning alert-dismissible" role="alert">
-  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> This site is under construction!
-	</div>
-	<nav class="navbar navbar-inverse" style="">
-	    <div class="container-fluid">
-	    <div class="navbar-header">
-	      <div class="smallbox image"></div> 
-	      <a class="navbar-brand" href="#">aykayPKT</a>
-	    </div>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> This site is under construction!
+  </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">aykayPKT</a>
+      </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-	        <li><a href="#">Contact me</a></li>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-	<article>
-		<section class="header">
-			<h1><span class="btn-xs glyphicon glyphicon-console" aria-hidden="true"></span>About me</h1>
-			<hr>
-		</section>
-		<div class="container">
-			<section class="about">
-				<div class="box image"></div>
-				<div class="box aboutMe"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, semper id posuere at, gravida vel sapien. Donec mollis arcu id diam dignissim, id euismod ante blandit. Curabitur tempus est nec tristique lobortis. In sagittis, neque quis maximus efficitur, dui magna tempus velit, ac hendrerit ante eros vel lorem. Morbi orci magna, placerat ac sem id, vestibulum ultrices orci. Cras vitae posuere ex. Vestibulum a condimentum elit. Nulla dignissim, nulla eget fermentum finibus, quam diam porttitor augue, at suscipit ipsum dui et felis. Ut pellentesque, sapien quis fermentum elementum, massa augue tincidunt sem, aliquam rutrum odio leo vitae lectus. Duis id interdum ex, in dictum odio. Etiam ac eros sapien. Mauris a diam sed tellus molestie pellentesque. Nunc lorem eros, pulvinar nec feugiat non, condimentum et arcu.</p></div>
-			</section>
-		</div>
-		<section class="header">
-			<h1><span class="btn-xs glyphicon glyphicon-console" aria-hidden="true"></span>Projects</h1>
-			<hr>
-		</section>
-		<div class="projects container">
-			<div><p class="smallbox" style="text-align: center">My First Game!</p></div>
-			<div><p class="smallbox" style="text-align: center">Filler Project Page</p></div>
-			<div><p class="smallbox" style="text-align: center">In progress</p></div>
-			</div>
-		<div class="projects container">
-			<a href="https://aykaypkt.github.io/shape_game/"><div class="circles game"></div></a>
-			<a href="https://aykaypkt.github.io/project_site/"><div class="circles project"></div></a>
-			<div class="circles"></div>	
-		</div>
-		<div class="projects container">
-			<div class="box text gametext"><p class='gametexthide' style="text-align: center">This is my first game made using Canvas. It is a simple shape identifier game.</p></div>
-			<div class="box text projecttext" style="text-align: center"><p class='projecttexthide'>Who likes cheesecake?</p></div>
-			<div class="box text" style="text-align: center"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, semper id posuere at, gravida vel sapien. Donec mollis arcu id diam dignissim, id euismod ante blandit. Curabitur tempus est nec tristique lobortis. In sagittis, neque quis maximus efficitur, dui magna tempus velit, ac hendrerit ante eros vel lorem. Morbi orci magna, placerat ac sem id, vestibulum ultrices orci. Cras vitae posuere ex.</p></div>	
-		</div>
-	</article>g
-    <script type="text/javascript">
-    window.onload = function() {
-    	var close = document.querySelector(".alert");
-    	close.addEventListener("click", function(){
-    		close.parentNode.removeChild(close);
-    	})
-    	var game = document.querySelector(".game");
-    	var gametexthide = document.querySelector(".gametexthide");
-    	game.addEventListener("mouseover", function(){
-    		gametexthide.style.visibility = "visible";
-    		gametexthide.classList.remove("fadeOut");
-    		gametexthide.classList.add("fadeText");
-    	});
-    	game.addEventListener("mouseout", function(){
-    		gametexthide.classList.remove("fadeText");
-    		gametexthide.classList.add("fadeOut");
-    	});
-    	var project = document.querySelector(".project");
-    	var projecttext = document.querySelector(".projecttexthide");
-    	project.addEventListener("mouseover", function(){
-    		projecttext.style.visibility = "visible";
-    		projecttext.classList.remove("fadeOut");
-    		projecttext.classList.add("fadeText");
-    	});
-    	project.addEventListener("mouseout", function(){
-    		projecttext.classList.remove("fadeText");
-    		projecttext.classList.add("fadeOut");
-    	});
-    }
-    </script>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Blog</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Contact Me <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="mailto:webmaster@example.com">E-mail</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Instagram</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Steam</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+    <section class="header">
+      <h1><span class="btn-xs glyphicon glyphicon-console"></span>About me</h1>
+      <hr>
+    </section>
+    <div class="row">
+      <div class="profile col-xs-4 col-xs-offset-1 col-sm-4 col-md-3">
+        <img class="phoenix" src="Albert_1.jpg" alt="Picture of Albert" >
+      </div>
+      <div class="profiletext col-xs-8 col-sm-7 col-md-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae doloremque a exercitationem, eos quae neque error provident et eum! Quasi maiores aspernatur reprehenderit, beatae. Omnis libero, asperiores dolorem eum.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <section class="header">
+      <h1><span class="btn-xs glyphicon glyphicon-console"></span>Projects</h1>
+      <hr>
+    </section>
+    <div class="row">
+      <div class="col-xs-4 box">
+        <a href="https://aykaypkt.github.io/gif_party/"><img class="imagebox img-responsive" src="gif_party.png" alt="gif party screenshot"></a>
+      </div>
+      <div class="col-xs-4 box">
+        <a href="https://aykaypkt.github.io/hackOrSnooze/"><img class="imagebox img-responsive" src="hackorsnooze.png" alt="Hack or snooze screenshot"></a>
+      </div>
+      <div class="col-xs-4 box">
+        <a href="https://aykaypkt.github.io/shape_game/"><img class="imagebox img-responsive" src="shapes_game.png" alt="shapes game screenshot"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 box">
+        <img class="imagebox img-responsive" src="https://github.com/aykaypkt/public_images/blob/master/main/proj.png?raw=true" alt="project">
+      </div>
+      <div class="col-xs-4 box">
+        <img class="imagebox img-responsive" src="#" alt="Coming soon...">
+      </div>
+      <div class="col-xs-4 box">
+        <img class="imagebox img-responsive" src="#" alt="Coming soon...">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <script  
+    src="https://code.jquery.com/jquery-3.2.1.min.js"   
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
