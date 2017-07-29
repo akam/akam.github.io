@@ -1,18 +1,9 @@
 body{
-  background-color: rgb(50,50,50);
-  color: white;
-}
-
-#projects{
-  background-color: rgb(55,55,55);
-}
-
-body{
-  animation: fade 4s 1;
+  animation: fade 2s 1;
 }
 @keyframes fade{
   0%{
-    opacity: 0
+    opacity: 0;
   }
   20%{
     opacity: 0;
@@ -21,40 +12,134 @@ body{
     opacity: 1;
   }
 }
-.container{
-  margin-bottom: 100px;
-}
-.row{
-  margin-bottom: 3%;
-}
+
 .phoenix{
   border: 1px white solid;
-  width: 200px;
-  height: 200px;
-}
-.header{
-  margin:0 4%;
-  margin-bottom: 3%;
+  width: 100%;
+  max-width: 150px;
+  min-width: 100px;
+  margin-bottom: 20px;
 }
 
-.imagebox{
-  width: 350px;
-  height: 200px;
-  border: 3px white solid;
+.profile-card {
+  margin: 0 auto;
+  padding: 20px 50px;
 }
 
-.imagebox:hover{
-  animation: fadeIn 1s 1;
-  animation-fill-mode: forwards;
-  box-shadow: 0 0 10px 3px lightblue;
+.side-bar {
+  background-color: #363942;
+  height: 100vh;
+  border-right: 2px solid #23232E;
+  /*box-shadow: 3px 0px 13px #969696;*/
+   z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
-@keyframes fadeIn{
-  100%{
-    filter: blur(0);
+.about-box:hover, .about-selected {
+  border-left: 5px solid #04BFBF;
+  background-color: #444559;
+}
+
+.exp-box:hover, .exp-selected {
+  border-left: 5px solid #CAFCD8;
+  background-color: #444559;
+}
+
+.edu-box:hover, .edu-selected {
+  border-left: 5px solid #F7E967;
+  background-color: #444559;
+}
+
+.skill-box:hover, .skill-selected {
+  border-left: 5px solid #A9CF54;
+  background-color: #444559;
+}
+
+.project-box:hover, .project-selected {
+  border-left: 5px solid #588F27;
+  background-color: #444559;
+}
+
+.contact-box:hover, .contact-selected {
+  border-left: 5px solid #94D7F2;
+  background-color: #444559;
+}
+
+.main {
+  background-color: white;
+}
+
+.side-bar-text, .side-bar-icon {
+  color: white;
+  font-size: 20px;
+}
+
+.side-bar-text {
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 992px){
+  .side-bar-text{
+    text-align: left;
   }
 }
 
-p{
-  font-size: 16px;
+.icon {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.side-box {
+  border-bottom: 2px solid #23232E;
+  padding: 10px 0;
+}
+
+.text-decoration-off:hover {
+  text-decoration: none;
+}
+
+.logo {
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+  border-bottom: 2px solid #23232E;
+}
+
+.logo-text {
+  margin-top: 0;
+}
+
+.header {
+  width: 100%;
+  /*background-color: #FFFAD5;*/
+  color: #FFC72D;
+  padding: 5px;
+  margin: 5px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-odd {
+  color: #006BB6;
+}
+
+#content {
+  padding: 0;
+}
+
+.inner-content{
+  margin: 0 50px;
+}
+
+.odd {
+  padding: 20px;
+}
+
+.even {
+  background-color: #3F424C;
+  color: white;
+  padding: 20px;
 }
