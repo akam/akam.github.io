@@ -17,17 +17,18 @@ $(document).ready(function(){
       var edu_pos = $('#education').offset().top;
       var proj_pos = $('#projects').offset().top;
       var contact_pos = $('#contact').offset().top;
-
-      console.log(skills_pos);
-      console.log(window.pageYOffset);
       if(y_scroll_pos > about_pos - 200 && y_scroll_pos < about_pos) { toggleSelection('about'); }
-      if(y_scroll_pos > exp_pos - 200 && y_scroll_pos < exp_pos) { toggleSelection('exp'); }
+      if(y_scroll_pos > exp_pos - 200 && y_scroll_pos < exp_pos) {
+        toggleSelection('exp');
+        $('.fade-skill').fadeIn("slow", function(){
+          console.log('complete!');
+        })
+      }
       if(y_scroll_pos > skills_pos - 200 && y_scroll_pos < skills_pos) { toggleSelection('skill'); }
       if(y_scroll_pos > edu_pos - 200 && y_scroll_pos < edu_pos) { toggleSelection('edu'); }
       if(y_scroll_pos > proj_pos - 200 && y_scroll_pos < proj_pos) { toggleSelection('project'); }
       if(y_scroll_pos > contact_pos - 200 && y_scroll_pos < contact_pos) { toggleSelection('contact'); }
-      console.log($(window).scrollTop() + $(window).height(), $(document).height());
-      if($(window).scrollTop() + $(window).height() >= $(document).height() - 1) { toggleSelection('contact'); }
+      if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) { toggleSelection('contact'); }
   });
 
   $('#click-logo').on('click', () => { toggleSelection('about'); })
