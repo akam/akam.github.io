@@ -221,4 +221,7 @@ p {
   .phoenix {
     max-width: 150px;
   }
+  .logo {
+    padding: 15px 0;
+  }
 }
