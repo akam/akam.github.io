@@ -49,32 +49,64 @@ p {
   width: 100%;
 }
 
-.about-box:hover, .about-selected {
+@media (hover:hover){
+  .about-box:hover {
+    border-left: 5px solid #04BFBF;
+    background-color: #444559;
+  }
+
+  .exp-box:hover {
+    border-left: 5px solid #CAFCD8;
+    background-color: #444559;
+  }
+
+  .edu-box:hover {
+    border-left: 5px solid #F7E967;
+    background-color: #444559;
+  }
+
+  .skill-box:hover {
+    border-left: 5px solid #A9CF54;
+    background-color: #444559;
+  }
+
+  .project-box:hover {
+    border-left: 5px solid #588F27;
+    background-color: #444559;
+  }
+
+  .contact-box:hover {
+    border-left: 5px solid #94D7F2;
+    background-color: #444559;
+  }
+}
+
+.about-selected {
   border-left: 5px solid #04BFBF;
   background-color: #444559;
 }
 
-.exp-box:hover, .exp-selected {
+.exp-selected {
   border-left: 5px solid #CAFCD8;
   background-color: #444559;
 }
 
-.edu-box:hover, .edu-selected {
+.edu-selected {
   border-left: 5px solid #F7E967;
   background-color: #444559;
 }
 
-.skill-box:hover, .skill-selected {
+.skill-selected {
   border-left: 5px solid #A9CF54;
   background-color: #444559;
 }
 
-.project-box:hover, .project-selected {
+.project-selected {
   border-left: 5px solid #588F27;
   background-color: #444559;
 }
 
-.contact-box:hover, .contact-selected {
+.contact-selected {
   border-left: 5px solid #94D7F2;
   background-color: #444559;
 }
