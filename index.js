@@ -15,6 +15,7 @@ $(window).on('scroll', function() {
     var edu_pos = $('#education').offset().top;
     var proj_pos = $('#projects').offset().top;
     var contact_pos = $('#contact').offset().top;
+
     console.log(skills_pos);
     console.log(window.pageYOffset);
     if(y_scroll_pos > about_pos - 200 && y_scroll_pos < about_pos) { toggleSelection('about'); }
@@ -23,6 +24,7 @@ $(window).on('scroll', function() {
     if(y_scroll_pos > edu_pos - 200 && y_scroll_pos < edu_pos) { toggleSelection('edu'); }
     if(y_scroll_pos > proj_pos - 200 && y_scroll_pos < proj_pos) { toggleSelection('project'); }
     if(y_scroll_pos > contact_pos - 200 && y_scroll_pos < contact_pos) { toggleSelection('contact'); }
+    if($(window).scrollTop() + $(window).height() == $(document).height()) { toggleSelection('contact'); }
 });
 
 $('#click-logo').on('click', () => { toggleSelection('about'); })
