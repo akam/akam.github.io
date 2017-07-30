@@ -7,30 +7,9 @@ $('.side-bar').affix({
       }
 });
 
-
-// $(window).scroll(function() {
-//    var hT = $('#about').offset().top,
-//        hH = $('#about').outerHeight(),
-//        wH = $(window).height(),
-//        wS = $(this).scrollTop();
-//    if (wS > (hT+hH-wH)){
-//        console.log('about on the view!');
-//    }
-// });
-
-// $(window).scroll(function() {
-//    var hT = $('#exp').offset().top,
-//        hH = $('#exp').outerHeight(),
-//        wH = $(window).height(),
-//        wS = $(this).scrollTop();
-//    if (wS > (hT+hH-wH)){
-//        console.log('exp on the view!');
-//    }
-// });
-
 $(window).on('scroll', function() {
     var y_scroll_pos = window.pageYOffset;
-    var about_pos = $('#about').offset().top;// set to whatever you want it to be
+    var about_pos = $('#about').offset().top;
     var exp_pos = $('#exp').offset().top;
     var skills_pos = $('#skills').offset().top;
     var edu_pos = $('#education').offset().top;
@@ -38,25 +17,12 @@ $(window).on('scroll', function() {
     var contact_pos = $('#contact').offset().top;
     console.log(skills_pos);
     console.log(window.pageYOffset);
-    if(y_scroll_pos > about_pos - 200 && y_scroll_pos < about_pos) {
-      toggleSelection('about');
-    }
-    if(y_scroll_pos > exp_pos - 200 && y_scroll_pos < exp_pos) {
-      toggleSelection('exp');
-    }
-    if(y_scroll_pos > skills_pos - 200 && y_scroll_pos < skills_pos) {
-      toggleSelection('skill');
-    }
-    if(y_scroll_pos > edu_pos - 200 && y_scroll_pos < edu_pos) {
-      toggleSelection('edu');
-    }
-    if(y_scroll_pos > proj_pos - 200 && y_scroll_pos < proj_pos) {
-      toggleSelection('project');
-    }
-    if(y_scroll_pos > contact_pos - 200 && y_scroll_pos < contact_pos) {
-      toggleSelection('contact');
-    }
-
+    if(y_scroll_pos > about_pos - 200 && y_scroll_pos < about_pos) { toggleSelection('about'); }
+    if(y_scroll_pos > exp_pos - 200 && y_scroll_pos < exp_pos) { toggleSelection('exp'); }
+    if(y_scroll_pos > skills_pos - 200 && y_scroll_pos < skills_pos) { toggleSelection('skill'); }
+    if(y_scroll_pos > edu_pos - 200 && y_scroll_pos < edu_pos) { toggleSelection('edu'); }
+    if(y_scroll_pos > proj_pos - 200 && y_scroll_pos < proj_pos) { toggleSelection('project'); }
+    if(y_scroll_pos > contact_pos - 200 && y_scroll_pos < contact_pos) { toggleSelection('contact'); }
 });
 
 $('#click-logo').on('click', () => { toggleSelection('about'); })

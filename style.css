@@ -13,10 +13,10 @@ body{
   }
 }
 
-.phoenix{
+.phoenix {
   border: 1px white solid;
   width: 100%;
-  max-width: 150px;
+  max-width: 200px;
   min-width: 100px;
   margin-bottom: 20px;
 }
@@ -82,12 +82,6 @@ body{
   text-align: center;
 }
 
-@media (min-width: 992px){
-  .side-bar-text{
-    text-align: left;
-  }
-}
-
 .icon {
   text-align: center;
   margin-right: 10px;
@@ -142,4 +136,16 @@ body{
   background-color: #3F424C;
   color: white;
   padding: 20px;
+}
+
+@media (min-width: 992px){
+  .side-bar-text{
+    text-align: left;
+  }
+}
+
+@media (max-width: 992px){
+  .phoenix {
+    max-width: 150px;
+  }
 }
