@@ -19,8 +19,9 @@ body {
 }
 
 p {
-  font-family: Arial;
-  font-size: 20px;
+  font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   word-spacing: 2px;
 }
 
@@ -212,9 +213,47 @@ p {
   color: lightblue;
 }
 
+.project-card {
+  border: 2px solid #23232E;
+  background: #F3F3F3;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  border-radius: 10px;
+  box-shadow: 4px 4px 16px 0px #1f1e1e;
+}
+
+.project-image {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  background: lightgrey;
+}
+
+.project-description {
+  margin: 10px 20px 0 20px;
+  font-size: 14px;
+  color: black;
+  line-height: 1.5;
+  font-family: "Roboto",sans-serif;
+}
+
+.project-title {
+  color: #63A69F;
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Roboto",sans-serif;
+}
+
+
 @media (min-width: 992px) {
   .side-bar-text{
     text-align: left;
+  }
+  .first-card {
+    margin-left: 35px !important;
   }
 }
 
@@ -225,4 +264,8 @@ p {
   .logo {
     padding: 15px 0;
   }
+}
+
+.contact-card h4 {
+  font-size: 16px;
 }
