@@ -254,11 +254,6 @@ p {
   font-weight: 400;
 }
 
-.edu-title {
-  color: #754E28;
-}
-
-
 @media (min-width: 992px) {
   .side-bar-text{
     text-align: left;
